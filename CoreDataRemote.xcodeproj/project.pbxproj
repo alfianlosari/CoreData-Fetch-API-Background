@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		8B49D4C621588CDF00803884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4C521588CDF00803884 /* AppDelegate.swift */; };
-		8B49D4C821588CDF00803884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4C721588CDF00803884 /* ViewController.swift */; };
+		8B49D4C821588CDF00803884 /* FilmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4C721588CDF00803884 /* FilmListViewController.swift */; };
 		8B49D4CB21588CDF00803884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B49D4C921588CDF00803884 /* Main.storyboard */; };
 		8B49D4CD21588CE000803884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B49D4CC21588CE000803884 /* Assets.xcassets */; };
 		8B49D4D021588CE000803884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B49D4CE21588CE000803884 /* LaunchScreen.storyboard */; };
+		8B49D4D8215892EC00803884 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4D7215892EC00803884 /* CoreDataStack.swift */; };
+		8B49D4DA2158A23300803884 /* ApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4D92158A23300803884 /* ApiRepository.swift */; };
+		8B49D4DD2158A40B00803884 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4DB2158A40B00803884 /* StarWars.xcdatamodeld */; };
+		8B49D4DF2158A57D00803884 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4DE2158A57D00803884 /* Film.swift */; };
+		8B49D4E12158B20D00803884 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49D4E02158B20D00803884 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B49D4C221588CDF00803884 /* CoreDataRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B49D4C521588CDF00803884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B49D4C721588CDF00803884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B49D4C721588CDF00803884 /* FilmListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewController.swift; sourceTree = "<group>"; };
 		8B49D4CA21588CDF00803884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B49D4CC21588CE000803884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B49D4CF21588CE000803884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B49D4D121588CE000803884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B49D4D7215892EC00803884 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8B49D4D92158A23300803884 /* ApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepository.swift; sourceTree = "<group>"; };
+		8B49D4DC2158A40B00803884 /* StarWars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWars.xcdatamodel; sourceTree = "<group>"; };
+		8B49D4DE2158A57D00803884 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		8B49D4E02158B20D00803884 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		8B49D4C421588CDF00803884 /* CoreDataRemote */ = {
 			isa = PBXGroup;
 			children = (
+				8B72E3AE215BEBD90008CBBA /* Controllers */,
+				8B72E3AC215BEBA80008CBBA /* Data */,
+				8B72E3AD215BEBC10008CBBA /* Repository */,
+				8B72E3AF215BEC010008CBBA /* Resources */,
+			);
+			path = CoreDataRemote;
+			sourceTree = "<group>";
+		};
+		8B72E3AC215BEBA80008CBBA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8B49D4D7215892EC00803884 /* CoreDataStack.swift */,
+				8B49D4DB2158A40B00803884 /* StarWars.xcdatamodeld */,
+				8B49D4E02158B20D00803884 /* DataProvider.swift */,
+				8B49D4DE2158A57D00803884 /* Film.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8B72E3AD215BEBC10008CBBA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8B49D4D92158A23300803884 /* ApiRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8B72E3AE215BEBD90008CBBA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B49D4C721588CDF00803884 /* FilmListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B72E3AF215BEC010008CBBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8B49D4C521588CDF00803884 /* AppDelegate.swift */,
-				8B49D4C721588CDF00803884 /* ViewController.swift */,
 				8B49D4C921588CDF00803884 /* Main.storyboard */,
 				8B49D4CC21588CE000803884 /* Assets.xcassets */,
 				8B49D4CE21588CE000803884 /* LaunchScreen.storyboard */,
 				8B49D4D121588CE000803884 /* Info.plist */,
 			);
-			path = CoreDataRemote;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B49D4C821588CDF00803884 /* ViewController.swift in Sources */,
+				8B49D4D8215892EC00803884 /* CoreDataStack.swift in Sources */,
+				8B49D4DF2158A57D00803884 /* Film.swift in Sources */,
+				8B49D4E12158B20D00803884 /* DataProvider.swift in Sources */,
+				8B49D4C821588CDF00803884 /* FilmListViewController.swift in Sources */,
+				8B49D4DD2158A40B00803884 /* StarWars.xcdatamodeld in Sources */,
+				8B49D4DA2158A23300803884 /* ApiRepository.swift in Sources */,
 				8B49D4C621588CDF00803884 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,13 +335,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4954J9MK5;
-				INFOPLIST_FILE = CoreDataRemote/Info.plist;
+				DEVELOPMENT_TEAM = 5C2XD9H2JS;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreDataRemote/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfiangojek.CoreDataRemote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.CoreDataRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,13 +353,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4954J9MK5;
-				INFOPLIST_FILE = CoreDataRemote/Info.plist;
+				DEVELOPMENT_TEAM = 5C2XD9H2JS;
+				INFOPLIST_FILE = "$(SRCROOT)/CoreDataRemote/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfiangojek.CoreDataRemote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.CoreDataRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B49D4DB2158A40B00803884 /* StarWars.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B49D4DC2158A40B00803884 /* StarWars.xcdatamodel */,
+			);
+			currentVersion = 8B49D4DC2158A40B00803884 /* StarWars.xcdatamodel */;
+			path = StarWars.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B49D4BA21588CDF00803884 /* Project object */;
 }
