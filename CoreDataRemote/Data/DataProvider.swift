@@ -56,7 +56,7 @@ class DataProvider {
         var successfull = false
         taskContext.performAndWait {
             let matchingEpisodeRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Film")
-            let episodeIds = jsonDictionary.map { $0["episode_id"] as? String }.compactMap { $0 }
+            let episodeIds = jsonDictionary.map { $0["episode_id"] as? Int }.compactMap { $0 }
             matchingEpisodeRequest.predicate = NSPredicate(format: "episodeId in %@", argumentArray: [episodeIds])
             
             let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: matchingEpisodeRequest)

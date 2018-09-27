@@ -41,5 +41,5 @@ class Film: NSManagedObject {
         self.releaseDate = Film.dateFormatter.date(from: releaseDate) ?? Date(timeIntervalSince1970: 0)
         self.title = title
     }
-    
+
 }
